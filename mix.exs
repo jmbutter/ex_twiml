@@ -18,7 +18,7 @@ defmodule ExTwiml.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger], extra_applications: [:recase]]
   end
 
   # Dependencies can be Hex packages:
@@ -32,6 +32,7 @@ defmodule ExTwiml.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
+      {:recase, "~> 0.5"},
       {:ex_doc, ">= 0.0.0", only: [:dev, :docs]},
       {:inch_ex, ">= 0.0.0", only: :docs}
     ]

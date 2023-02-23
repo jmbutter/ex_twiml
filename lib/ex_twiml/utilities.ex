@@ -24,8 +24,8 @@ defmodule ExTwiml.Utilities do
     options = Keyword.merge(defaults(name), options)
     name =
       name
-      |> camelize()
-      |> String.capitalize()
+      |> to_string()
+      |> Recase.to_pascal()
 
     do_create_tag(type, name, xml_attributes(options))
   end
