@@ -75,7 +75,7 @@ defmodule ExTwiml do
 
     # Non-nested
     :say, :number, :play, :sms, :sip, :client, :conference, :queue, :enqueue,
-    :redirect, :body, :media, :identity, :application
+    :redirect, :body, :media, :identity, :application, :application_sid
   ]
 
   @simple_verbs [:leave, :hangup, :reject, :pause, :record, :parameter]
